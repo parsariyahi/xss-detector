@@ -42,13 +42,13 @@ playwright install chromium
 ### Basic Usage
 
 ```bash
-python xss_scanner.py https://example.com
+python xss_detector.py https://example.com
 ```
 
 ### Advanced Options
 
 ```bash
-python xss_scanner.py https://example.com \
+python xss_detector.py https://example.com \
     --depth 3 \
     --pages 100 \
     --output ./scan_results \
@@ -79,16 +79,16 @@ python xss_scanner.py https://example.com \
 
 ```bash
 # Scan a website with default settings
-python xss_scanner.py https://target.com
+python xss_detector.py https://target.com
 
 # Deep scan with more pages
-python xss_scanner.py https://target.com --depth 3 --pages 200
+python xss_detector.py https://target.com --depth 3 --pages 200
 
 # Scan with visible browser (for debugging)
-python xss_scanner.py https://target.com --no-headless
+python xss_detector.py https://target.com --no-headless
 
 # Custom output directory
-python xss_scanner.py https://target.com -o ./my_results
+python xss_detector.py https://target.com -o ./my_results
 ```
 
 ## Output
@@ -181,7 +181,7 @@ The scanner includes several features to prevent IP blocking:
 
 ```bash
 # Slower, more stealthy scan
-python xss_scanner.py https://target.com \
+python xss_detector.py https://target.com \
     --min-delay 3.0 \
     --max-delay 6.0 \
     --request-delay 4.0 \
@@ -214,7 +214,7 @@ playwright install chromium
 If you get timeout errors, increase the timeout:
 
 ```bash
-python xss_scanner.py https://example.com --timeout 60000
+python xss_detector.py https://example.com --timeout 60000
 ```
 
 ### Browser Issues
